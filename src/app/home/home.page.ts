@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StagService } from '../api/stag.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private data:Object = ''
+
+  constructor(
+    private api:StagService
+  ) {}
+
+  ngOnInit(){
+    this.api.getSchedule('A16082').subscribe((data)=> {
+      console.log(data);
+      this.data = data;
+    })
+  }
 
 }

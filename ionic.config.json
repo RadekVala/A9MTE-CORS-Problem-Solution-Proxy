@@ -1,5 +1,11 @@
 {
   "name": "UTBScheduleApp",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [{
+    "path": "/goto",
+    "proxyUrl": "https://stag-ws.utb.cz"
+}]
 }

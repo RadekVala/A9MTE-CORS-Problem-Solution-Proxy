@@ -1,0 +1,8 @@
+{
+    "/ws": {
+       "target": "https://stag-ws.utb.cz",
+       "changeOrigin": true,
+       "secure": true,
+       "logLevel": "debug"
+     }
+}
